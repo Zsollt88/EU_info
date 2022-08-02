@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nagy Zsolt">
+    <title>Betöltő felület</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="betoltoFelulet.css">
+
+
+</head>
+
+<body>
+    <div class="row">
+        <div id="content">
+
+            <div id="leftboxcontainer" class="col-4">
+                <span id="box1">
+
+                    <table>
+                        <tr>
+                            <td><span class="tagok">Tagok</span></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" onclick="members()" class="btn-primary">Érdekel</button></td>
+                        </tr>
+                    </table>
+
+                </span>
+                <span id="box1">
+                    <table>
+                        <tr>
+                            <td colspan="2"><span class="belepo">Volt<br> belépés?</span></td>
+                        </tr>
+                        <tr>
+                            <td><input id="year" type="number" value="1958" min="1958"></td>
+                            <td>
+                                <button type="button"
+                                    onclick="voltECsatlakozas(document.getElementById('year').value, euOrszagok)"
+                                    class="btn-primary">Érdekel</button>
+                            </td>
+                        </tr>
+                    </table>
+                </span>
+                <span id="box1">
+                    <table>
+                        <tr>
+                            <td colspan="2"><span class="belepo">Tagja<br> az EU-nak?</span></td>
+                        </tr>
+                        <tr>
+                            <td><input style="width:6em;" id="country" type="text" value="Ország"></td>
+                            <td>
+                                <button type="button"
+                                    onclick="kiCsatlakozott(document.getElementById('country').value, euOrszagok)"
+                                    class="btn-primary">Érdekel</button>
+                            </td>
+                        </tr>
+                    </table>
+
+                </span>
+                <span id="box1">
+                    <table>
+                        <tr>
+                            <td colspan="2"><span class="tobbi">Ebben<br> a hónapban <br>ki lépett be?</span></td>
+                        </tr>
+                        <tr>
+                            <td><input id='month' type="number" value="1" min="1" max="12"></td>
+                            <td>
+                                <button type="button"
+                                    onclick="haviBelepok(document.getElementById('month').value, euOrszagok)"
+                                    class="btn-primary">Érdekel</button>
+                            </td>
+                        </tr>
+                    </table>
+                </span>
+                <span id="box1">
+                    <table>
+                        <tr>
+                            <td><span class="tobbi">Melyik<br> ország <br> csatlakozott <br>utoljára?</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" onclick="utoljaraCsatlakozott(euOrszagok)"
+                                    class="btn-primary">Érdekel</button>
+                            </td>
+                        </tr>
+                    </table>
+                </span>
+                <span id="box1">
+                    <table>
+                        <tr>
+                            <td><span class="statisztika">Statisztika</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" onclick="Statisztika(euOrszagok)"
+                                    class="btn-primary">Érdekel</button>
+                            </td>
+                        </tr>
+                    </table>
+                </span>
+            </div>
+
+
+
+            <div id="scroll" class="col-4">
+                <img src="EU04.png" alt="EU" title="EU" class="map col-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis imperdiet nulla
+                    consectetur
+                    eleifend. Nullam eu elit sit amet nulla aliquet fringilla. Quisque arcu ante, rutrum vel nulla
+                    quis,
+                    mattis imperdiet orci. Curabitur euismod sem id lacus tincidunt sodales. In quis orci venenatis,
+                    posuere est vel, placerat purus. In ultrices ligula id elementum mollis. Aliquam sollicitudin
+                    tellus
+                    leo, sagittis porta erat posuere ut. Nam arcu turpis, rutrum vestibulum purus vel, lobortis
+                    varius
+                    urna. Etiam ut magna ac dui mollis interdum. Nulla quis turpis suscipit, convallis nulla sed,
+                    accumsan nisl. Vestibulum pellentesque augue id mauris viverra sodales. In ultrices efficitur
+                    nulla,
+                    et condimentum nisi efficitur non. Etiam lectus nibh, rutrum in mollis eget, lobortis quis sem.
+                </p>
+                <p id="result">A válasz a megkattintott kérdésre.</p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="euScript.js"></script>
+</body>
+
+
+</html>
